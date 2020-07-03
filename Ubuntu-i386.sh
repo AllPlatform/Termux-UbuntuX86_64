@@ -12,18 +12,14 @@ if [ "$first" != 1 ];then
 		case `dpkg --print-architecture` in
 		aarch64)
 			archurl="i386";
-			wget http://ftp.debian.org/debian/pool/main/q/qemu/qemu-user-static_2.8+dfsg-6+deb9u8_arm64.deb;
-			dpkg --extract ./qemu-user-static_2.8+dfsg-6+deb9u8_arm64.deb ./;
-			chmod 777 ./usr/bin/*;
-			cp -f ./usr/bin/* ~/../usr/bin;
-			rm -fR ./qemu-*.deb ./usr ;;
+			wget https://github.com/AllPlatform/UbuntuX86-Termux/raw/master/arm64/qemu-i386-static;
+			chmod 777 qemu-i386-static;
+			mv qemu-i386-static ~/../usr/bin;
 		arm)
 			archurl="i386";
-			wget http://ftp.debian.org/debian/pool/main/q/qemu/qemu-user-static_2.1+dfsg-12+deb8u6_armhf.deb;
-			dpkg --extract ./qemu-user-static_2.1+dfsg-12+deb8u6_armhf.deb ./;
-			chmod 777 ./usr/bin/*
-			cp -f ./usr/bin/* ~/../usr/bin/;
-			rm -fR ./qemu-*.deb ./usr ;;
+			wget https://github.com/AllPlatform/UbuntuX86-Termux/raw/master/arm/qemu-i386-static;
+			chmod 777 qemu-i386-static;
+			mv qemu-i386-static ~/../usr/bin/;
 		amd64)
 			archurl="amd64" ;;
 		x86_64)
