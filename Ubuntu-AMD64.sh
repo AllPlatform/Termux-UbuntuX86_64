@@ -14,12 +14,12 @@ if [ "$first" != 1 ];then
 			archurl="amd64";
 			wget https://github.com/AllPlatform/UbuntuX86-Termux/raw/master/arm64/qemu-x86_64-static;
 			chmod 777 qemu-i386-static;
-			mv qemu-i386-static ~/../usr/bin ;;
+			mv qemu-x86_64-static ~/../usr/bin ;;
 		arm)
 			archurl="amd64";
 			wget https://github.com/AllPlatform/UbuntuX86-Termux/raw/master/arm/qemu-x86_64-static;
 			chmod 777 qemu-i386-static;
-			mv qemu-i386-static ~/../usr/bin/ ;;
+			mv qemu-x86_64-static ~/../usr/bin/ ;;
 		amd64)
 			archurl="amd64" ;;
 		x86_64)
