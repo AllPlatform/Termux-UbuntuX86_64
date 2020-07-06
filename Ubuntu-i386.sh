@@ -12,12 +12,12 @@ if [ "$first" != 1 ];then
 		case `dpkg --print-architecture` in
 		aarch64)
 			archurl="i386";
-			wget https://github.com/AllPlatform/UbuntuX86-Termux/raw/master/arm64/qemu-i386-static;
+			wget https://github.com/AllPlatform/Termux-UbuntuX86_64/raw/master/arm64/qemu-i386-static;
 			chmod 777 qemu-i386-static;
 			mv qemu-i386-static ~/../usr/bin ;;
 		arm)
 			archurl="i386";
-			wget https://github.com/AllPlatform/UbuntuX86-Termux/raw/master/arm/qemu-i386-static;
+			wget https://github.com/AllPlatform/Termux-UbuntuX86_64/raw/master/arm/qemu-i386-static;
 			chmod 777 qemu-i386-static;
 			mv qemu-i386-static ~/../usr/bin/ ;;
 		amd64)
